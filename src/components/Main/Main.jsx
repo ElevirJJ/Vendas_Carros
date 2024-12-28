@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import img1 from '../../img/1.png';
+import img2 from '../../img/2.png';
+import img3 from '../../img/3.png';
 
 import './Main.scss';
 
@@ -8,21 +11,21 @@ const Main = () => {
     const imagens = [
         {
             id: 1,
-            img: '/public/img/1.png',
+            img: `${img1}`,
             title: 'Ferrari',
             p: 'Único dono',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi et beatae accusantium molestiae eligendi ducimus dolores id ipsum velit aliquam, similique'
         },
         {
             id: 2,
-            img: '/public/img/2.png',
+            img: `${img2}`,
             title: 'BMW',
             p: 'Único dono',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi et beatae accusantium molestiae eligendi ducimus dolores id ipsum velit aliquam, similique'
         },
         {   
             id: 3,
-            img: '/public/img/3.png',
+            img: `${img3}`,
             title: 'Cruze LTZ',
             p: 'Único dono',
             descricao: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi et beatae accusantium molestiae eligendi ducimus dolores id ipsum velit aliquam, similique'
