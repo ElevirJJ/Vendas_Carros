@@ -1,0 +1,27 @@
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    align-items: center;
+    background-color: rgb(58, 62, 73);
+
+    .logo{
+        img{
+            width: 150px;
+        }
+    }
+
+    .link{
+        display: flex;
+
+        nav{
+            ul{
+                display: flex;
+                gap: 40px;
+                list-style-type: none;
+            }
+           
+        }
+        
+    }
+}

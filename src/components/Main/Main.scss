@@ -1,0 +1,123 @@
+$color: white;
+$background-color: black;
+
+.container {
+    .semi-container {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        text-align: justify;
+        flex-wrap: wrap;
+        padding-top: 10%;
+        opacity: 0; 
+        transform: translateX(100vw); 
+        animation: slide-in 2s ease-in-out forwards; 
+
+        .carro-img {
+            max-width: 700px;
+
+            img {
+                max-width: 100%;
+                transform: rotate(0); 
+                animation: move-and-tilt 2s ease-in-out forwards;
+                animation-delay: 0.3s; 
+            }
+        }
+
+        .content {
+            width: 400px;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+            animation-delay: 0.9s; 
+
+            p {
+                padding-top: 15px;
+                color: $color;
+                animation-delay: 0.2s; 
+            }
+
+            h1 {
+                margin-top: 10px;
+                font-weight: bold;
+                color: $color;
+                animation-delay: 0.9s; 
+            }
+
+            button {
+                margin-top: 10px;
+                padding: 5px;
+                outline: none;
+                border: none;
+                color: $color;
+                background-color: $background-color;
+                text-transform: uppercase;
+                cursor: pointer;
+                border: 1px solid white;
+
+                &:hover {
+                    letter-spacing: 0.1rem;
+                    color: rgb(78, 68, 68);
+                }
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+
+        .lef {
+            margin-right: 10px;
+            color: aliceblue;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-size: 20px;
+        }
+
+        .direita {
+            margin-right: 10px;
+            color: aliceblue;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-size: 20px;
+        }
+    }
+}
+
+// EFEITOS DE ANIMAÇÃO
+@keyframes slide-in {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes move-and-tilt {
+    0% {
+        transform: translateX(100vw) rotate(0);
+    }
+    70% {
+        transform: translateX(0) rotate(0); 
+    }
+    100% {
+        transform: translateX(0) rotate(-20deg); 
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
